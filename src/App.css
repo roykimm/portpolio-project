@@ -7,6 +7,8 @@
   --primary-red : #ef403f;
   --primary-hover-red : #f33501;
   --primary-light-grey : #f4f4f4;
+  --primary-grey : #ccd1d9;
+  --primary-dark-grey : #666666;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
 
 /** navbar **/
 .nav {
-  z-index : 2;
+  z-index : 0;
 }
 
 .logo {
@@ -72,7 +74,7 @@ nav ul li {
 /** header **/
 .header-wrapper {
   position : relative;
-  background : url('stadttheater.jpg') no-repeat;
+  background : url('nature.jpg') no-repeat;
   background-size : cover;
   background-position : center;
   height : 90vh;
@@ -81,7 +83,7 @@ nav ul li {
 .main-info {
   display : flex;
   position : absolute;
-  z-index: 1;
+  z-index: 2;
   top : 0;
   left : 0;
   right : 0;
@@ -222,4 +224,94 @@ nav ul li {
 
 .services .box:hover p {
   color : var(--primary-white);
+}
+
+/** experience **/
+.experience {
+  padding : 0.7rem;
+}
+
+.experience-wrapper {
+  position : relative;
+  padding : 3.125rem 0;
+  overflow : hidden;
+
+}
+
+.experience h1 {
+  text-transform: uppercase;
+  color : var(--primary-orange);
+
+}
+
+.experience-wrapper::before {
+  position : absolute;
+  content : "";
+  top : 0;
+  left : 50%;
+  margin-left: -0.0625rem;
+  width : 0.124rem;
+  height : 100%;
+  background : var(--primary-grey);
+  z-index : 1;
+}
+
+.timeline-block {
+  width : calc(50% + 0.5rem);
+  display : flex;
+  justify-content: space-between;
+  clear : both;
+}
+
+.timeline-block-right {
+  float : right;
+}
+
+.timeline-block-left {
+  float : left;
+  direction : rtl;
+}
+
+.marker {
+  width : 1rem;
+  height : 1rem;
+  border-radius: 50%;
+  border : 0.3125rem solid var(--primary-dark);
+  background-color : var(--primary-orange);
+  margin-top : 0.625rem;
+  z-index : 3;
+}
+
+.timeline-content {
+  width : 95%;
+  padding : 0 0.9357rem;
+  color : var(--primary-dark-grey);
+  direction : ltr;
+}
+
+.timeline-content h3{
+  margin-top : 0.3125rem;
+  color : var(--primary-red);
+  font-weight : 900;
+}
+
+/** media **/
+@media (max-width: 768px){
+  .experience .container {
+    padding-left : 0;
+  }
+  .experience-wrapper::before {
+    left : 0.5rem;
+    margin-bottom : 1.875rem;
+  }
+  .timeline-block-right {
+    float : none;
+    width : 100%; 
+  }
+
+  .timeline-block-left {
+    float : none;
+    direction : ltr;
+    width : 100%; 
+  }
 }
