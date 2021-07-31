@@ -11,6 +11,7 @@
   --primary-dark-grey : #666666;
   --primary-black : #000000;
   --primary-transparent-black : rgba(0,0,0,0.7);
+  --primary-green : #green;
 }
 
 body {
@@ -503,8 +504,9 @@ nav ul li {
 
 .line {
   position : relative;
+  top : -0.8rem;
   width : 0;
-  height : 1.235rem;
+  height : 0.125rem;
   background : var(--primary-orange);;
   display : inline-block;
 }
@@ -548,6 +550,31 @@ nav ul li {
   /* color : none !important; */
   /* border : 1px solid var(--primary-red) !important; */
   text-transform: uppercase;
+}
+
+
+input:focus+.line, textarea:focus+.line {
+  width : 100%;
+  transition : width 0.5s ease-in-out;
+}
+
+input.form-control {
+  margin : -0.3rem 0;
+}
+
+textarea.form-control {
+  margin : -0.3rem 0;
+}
+
+.error-message {
+  color : var(--primary-white);
+  background : var(--primary-hover-red);
+  text-align : left;
+}
+
+.success-message {
+  font-weight : 900;
+  color : var(--primary-green);
 }
 
 /** media **/
