@@ -36,10 +36,11 @@ const Contacts = () => {
     }
 
     return (
-        <div className="contacts">
+        <div id="contacts" className="contacts">
             <div className="text-center">
                 <h1>contact me</h1>
-                <p>please fillout the form and describe</p>
+                <p>하단에 연락정보를 입력 후 contact me 버튼을 클릭해주세요.</p>
+                <p>메일 확인 후 연락 드리겠습니다.</p>
                 <div className="success-message">{successMessage}</div>
             </div>
             <div className="container">
@@ -51,7 +52,7 @@ const Contacts = () => {
                                 <input type="text" 
                                     id="name"
                                     className="form-control" 
-                                    placeholder="name"
+                                    placeholder="성명을 입력해주세요."
                                     name="name"
                                     autoComplete='new-password'
                                     {...register("name", { required: true , maxLength : 20})}
@@ -59,14 +60,14 @@ const Contacts = () => {
                                 <div className="line"></div>
                             </div>
                             <span className="error-message">
-                                {errors.name && "This field is required"}
+                                {errors.name && "필수입력항목입니다."}
                             </span>
                             <div className="text-center">
                                 <input type="text"  
                                     id="phone"
                                     name="phone"
                                     className="form-control" 
-                                    placeholder="phone"
+                                    placeholder="전화번호를 입력해주세요."
                                     phone="phone"
                                     autoComplete='new-password'
                                     {...register("phone", { required: true })}
@@ -74,14 +75,14 @@ const Contacts = () => {
                                 <div className="line"></div>
                             </div>
                             <span className="error-message">
-                                {errors.phone && "This field is required"}
+                                {errors.phone && "필수입력항목입니다."}
                             </span>
                             <div className="text-center">
                                 <input type="email"  
                                     id="email"
                                     name="email"
                                     className="form-control" 
-                                    placeholder="email"
+                                    placeholder="이메일을 입력해주세요."
                                     email="email"
                                     autoComplete='new-password'
                                     {...register("email", { required: true })}
@@ -89,22 +90,21 @@ const Contacts = () => {
                                 <div className="line"></div>
                             </div>
                             <span className="error-message">
-                                {errors.email && "This field is required"}
+                                {errors.email && "필수입력항목입니다."}
                             </span>
                             <div className="text-center">
                                 <input type="text" 
                                     id="subject"
                                     name="subject"
                                     className="form-control" 
-                                    placeholder="subject"
-                                    subject="subject"
+                                    placeholder="제목을 입력해주세요."
                                     autoComplete='new-password'
                                     {...register("subject", { required: true })}
                                 />
                                 <div className="line"></div>
                             </div>
                             <span className="error-message">
-                                {errors.subject && "This field is required"}
+                                {errors.subject && "필수입력항목입니다."}
                             </span>
                         </div>
                         <div className="col-md-6 col-xs-12">
@@ -113,7 +113,7 @@ const Contacts = () => {
                                     id="description"
                                     name="description"
                                     className="form-control" 
-                                    placeholder="description"
+                                    placeholder="내용을 입력해주세요."
                                     description="description"
                                     autoComplete='new-password'
                                     {...register("description", { required: true })}
@@ -122,10 +122,10 @@ const Contacts = () => {
                                 <div className="line"></div>
                             </div>
                             <span className="error-message">
-                                {errors.description && "This field is required"}
+                                {errors.description && "필수입력항목입니다."}
                             </span>
                             <button className="btn btn-outline-danger contact-btn" type="submit">
-                                Contact Me
+                                연락하기!
                             </button>
                         </div>
                     </div>

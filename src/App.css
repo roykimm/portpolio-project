@@ -3,6 +3,7 @@
 :root {
   --primary-white : #ffffff;
   --primary-orange : #f9ab00;
+  --primary-light-orange : #f9cb00;
   --primary-dark : rgb(52,58,64);
   --primary-red : #ef403f;
   --primary-hover-red : #f33501;
@@ -28,6 +29,10 @@ body {
   width : 16.25rem;
   height : 6rem;
   align-items: end;
+}
+
+.navbar {
+  height : 6rem;
 }
 
 /** menu links **/
@@ -77,10 +82,10 @@ nav ul li {
 /** header **/
 .header-wrapper {
   position : relative;
-  background : url('images/nature.jpg') no-repeat;
+  background : url('images/serverroom.jpg') no-repeat;
   background-size : cover;
   background-position : center;
-  height : 90vh;
+  height : 100vh;
 }
 
 .main-info {
@@ -101,6 +106,11 @@ nav ul li {
   color : var(--primary-orange);
   text-transform : uppercase;
 }
+
+.main-info h3 {
+  color : var(--primary-light-orange);
+}
+
 
 /** typed text **/
 .typed-text {
@@ -392,6 +402,11 @@ nav ul li {
   cursor : pointer;
   color : var(--primary-red);
 }
+
+.popupbox-wrapper {
+  margin-top : 7rem;
+}
+
 
 /** media **/
 @media (max-width: 768px) {
